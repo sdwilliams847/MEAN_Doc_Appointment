@@ -1,0 +1,38 @@
+<h1>New Appointment</h1>
+
+<form (submit)="createApp()">
+<div class="row">
+    <div class="form-group row">
+        <label for="example-date-input" class="col-2 col-form-label" >Date</label>
+        <div class="col-2">
+            <input class="form-control" name="date" type="date" min="2018-03-02" max="2018-12-31" [(ngModel)]="appointment.date">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="example-time-input" class="col-2 col-form-label">Time</label>
+        <div class="col-2">
+            <input class="form-control" name="time" type="time" [(ngModel)]="appointment.time">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <label for="exampleTextarea">Complaint: </label>
+        <textarea class="form-control" name="complaint" [(ngModel)]="appointment.complaint" rows="4"></textarea>
+    </div>
+</div>
+<div *ngIf="errors">
+  <div *ngFor="let error of errors">
+    <p>{{ error }}</p>
+  </div>
+</div>
+  <div class="row">  
+  <br><button type="submit" class="btn btn-primary">Submit</button>
+</div>
+</form>
+<div>
+  <br><a href="/"><button type="cancel" class="btn btn-primary">Cancel</button></a>
+
+</div>
+

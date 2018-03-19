@@ -1,0 +1,39 @@
+<h1>Doctor's Appointments</h1>
+
+<a (click)="logout()">Logout</a>
+
+<div class="row">
+  <div class="col-md-8">
+      <br><form>
+          <div class="form-group row">
+              <label for="search" class="col-sm-2 col-form-label">Search:</label>
+              <div class="col-sm-10">
+                  <input type="text" class="form-control" name="search" [(ngModel)]="search">
+              </div>
+          </div>
+      </form>
+  </div>
+</div>
+
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Time</th>
+      <th scope="col">Patient Name</th>
+      <th scope="col">Complaint</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- <tr *ngFor="let appointment of appointments | search: search"> -->
+    <tr>
+      <td>october 7 2018</td>
+      <td>8:00 AM</td>
+      <td>Spencer Williams</td>
+      <td>Lower back pain</td>
+    </tr>
+  </tbody>
+</table><br><br>
+
+<a href="newApp"><button>Add New Appointment</button>
